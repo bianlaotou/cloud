@@ -9,10 +9,18 @@ spring:
   profiles: dev 
   application: 
     name: cloud-config-dev
+eureka:
+  client: #客户端注册进eureka
+    serviceUrl:
+      defaultZone: http://127.0.0.1:10086/eureka/    
 ---
 server: 
   port: 8202
 spring: 
   profiles: test
   application: 
-    name: cloud-config-test    
+    name: cloud-config-test   
+eureka:
+  client: #客户端注册进eureka
+    serviceUrl:
+      defaultZone: http://127.0.0.1:10086/eureka/    
