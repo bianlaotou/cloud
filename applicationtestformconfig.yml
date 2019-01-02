@@ -1,0 +1,63 @@
+
+
+
+
+
+
+spring: 
+  profiles: test 
+  application: 
+    name: configsevertest-test
+
+#在此指定服务注册中心地址
+eureka:
+  client: #客户端注册进eureka
+    serviceUrl:
+      defaultZone: http://127.0.0.1:10086/eureka/
+  instance:
+    instance-id: configsevertest  #指定注册到eureka里面的客户端名字
+    prefer-ip-address: true #在Eureka访问路径可以显示ip地址
+spring:
+  application:
+    name: configservertest
+#server:
+#  port:   没有写port，默认8080
+
+info: #设置注册到eureka里面的服务信息
+  app.name: configservertest #服务的名字
+  company.name: www.configservertest.com    #服务的其它信息
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+  mm: dd #自定义的其它信息
+server:
+  port: 8097
+
+
+---
+spring: 
+  profiles: dev 
+  application: 
+    name: configsevertest-dev
+
+#在此指定服务注册中心地址
+eureka:
+  client: #客户端注册进eureka
+    serviceUrl:
+      defaultZone: http://127.0.0.1:10086/eureka/
+  instance:
+    instance-id: configsevertest  #指定注册到eureka里面的客户端名字
+    prefer-ip-address: true #在Eureka访问路径可以显示ip地址
+spring:
+  application:
+    name: configservertest
+#server:
+#  port:   没有写port，默认8080
+
+info: #设置注册到eureka里面的服务信息
+  app.name: configservertest #服务的名字
+  company.name: www.configservertest.com    #服务的其它信息
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+  mm: dd #自定义的其它信息
+server:
+  port: 8099
