@@ -20,9 +20,7 @@ eureka:
   instance:
     instance-id: configsevertest  #指定注册到eureka里面的客户端名字
     prefer-ip-address: true #在Eureka访问路径可以显示ip地址
-spring:
-  application:
-    name: configservertest
+
 #server:
 #  port:   没有写port，默认8080
 
@@ -50,9 +48,7 @@ eureka:
   instance:
     instance-id: configsevertest  #指定注册到eureka里面的客户端名字
     prefer-ip-address: true #在Eureka访问路径可以显示ip地址
-spring:
-  application:
-    name: configservertest
+
 #server:
 #  port:   没有写port，默认8080
 
